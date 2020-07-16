@@ -1,0 +1,28 @@
+<html>
+<head>
+
+<title>JavaScript Functions</title>
+</head>
+<body>
+
+<p>Outside myFunction() carName is undefined.</p>
+
+<p id="trial"></p>
+
+<p id="trial2"></p>
+
+<script>
+myFunction();
+
+function myFunction() {
+  var carName = "audi";
+  document.getElementById("trial").innerHTML =
+  typeof carName + " " + carName;
+}
+
+document.getElementById("trial2").innerHTML =
+typeof carName;
+</script>
+
+</body>
+</html>
