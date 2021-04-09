@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        ASSIGNMENT-8
+    </title>
+    <style>
+        * {
+            background-color: pink;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color: blue;
+        }
+        
+        #timer {
+            background-color: red;
+            width: 150px;
+            height: 80px;
+            text-align: center;
+            font-size: 50px;
+            margin-left: 620px;
+        }
+        
+        button {
+            background-color: black;
+            color: red;
+            width: 100px;
+            height: 50px;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Timer
+    </h1>
+    <div id="timer">
+        0
+    </div>
+    <button onclick="start()">START</button>
+    <button onclick="stop()">STOP</button>
+    <script>
+        i = 0;
+
+        function fun1() {
+            document.getElementById('timer').innerHTML = i;
+            i++;
+        }
+
+        function start() {
+            t = setInterval(fun1, 1000);
+        }
+
+        function stop() {
+            t = setInterval(t);
+        }
+    </script>
+</body>
+
+</html>
