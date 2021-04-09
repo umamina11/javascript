@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        background-color: cyan;
+    }
+    
+    div {
+        text-align: center;
+    }
+    
+    #greet {
+        background-color: black;
+        color: white;
+        padding: 38px;
+        margin-top: 250px;
+        align-items: center;
+        font-size: 30px;
+        font-weight: 800px;
+    }
+</style>
+<script>
+    setInterval(greet, 500);
+    greet();
+
+    function greet() {
+        var g;
+        var time = new Date();
+        var h = time.getHours();
+        var m = time.getMinutes();
+        var s = time.getSeconds();
+        if (h < 12) {
+            g = "Good Morning";
+        } else if (h < 17) {
+            g = "Good Afternoon";
+        } else {
+            g = "Good Evening";
+        }
+        document.getElementById("greet").innerText = g + "! " + "Uma Mina ";
+
+    }
+
+    function greeting() {
+        document.getElementById("greet").style.display = "none";
+    }
+</script>
+
+<body>
+    <div id="greet" onclick="greeting()">
+
+    </div>
+</body>
+
+</html>
