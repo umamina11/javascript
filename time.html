@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>question4</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+    
+    h2 {
+        font-weight: 600;
+        color: aqua;
+        padding: 20%;
+    }
+    
+    #demo {
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <h2>click the button</h2>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var welcome;
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            if (minute < 10) {
+                minute = "0" + minute;
+            }
+            if (second < 10) {
+                second = "0" + second;
+            }
+            if (hour < 12) {
+                welcome = "Good Morning";
+            } else if (hour < 17) {
+                welcome = "Good Afternoon";
+            } else {
+                welcome = "Good Evening";
+            }
+            var x = document.getElementById("demo");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+
+            document.write("<h2>" + "<font color='cya'>" + welcome + "</font>" + "<br>" + " Welcome ....Let's Get Started");
+            document.write("<br>" + hour + ":" + minute + ":" + second);
+
+
+            // document.getElementById("demo").innerHTML = greeting;
+        }
+    </script>
+
+</body>
+
+</html>
